@@ -1,0 +1,31 @@
+REST vs SOAP
+SOAP - Simple Object Access Protocol
+REST - Representation State Transfer
+- In REST, there's no specific protocol for data to be sent. It can be XML, JSON, text, whatever.
+- No specific method for HTTP either. Can be POST/GET
+- Service Definition - Call to any web service: You must know what this application serves. (I/O, arguments needed etc). REST has none.
+--- REQUESTS
+- In addition to GET, POST, REST also has PUT, DELETE. 
+- Instance (/messages/{messageID}) URIs vs Resource (something like /messages) URIs: 
+- Irrespective of what the action is (do, get, delete) you still use the same URL in REST. The difference is the HTTP method used. In short, the method tells what the operation is and URI tells what entity is being operated upon.
+- PUT, POST, DELETE (Write something) and GET (fetches something)
+- DELETE is safe to make multiple calls. Doesnt have side effects. PUT also does this, just keeps replacing with new values. POST however, is different. Every time you make a POST, it creates a new resource. i.e. Repeatable and non-repeatable. Safety also comes into picture: GET is idempotent i.e. safely repeatable and others are non-idempotent i.e. not safely repeatable.
+--- RESPONSES
+- JSON, XML
+- Response is simply a representation of the resources (hence REst). Can be requested in whatever format.
+- Status Codes
+
+HATEOAS - Hypermedia as the engine of application state
+Richardson Maturity Model - Defines if an API is RESTful or not, and if yes, to what extent. Done in 4 levels.
+Level 0
+Level 1 - Resource URIs
+Level 2 - Resource URI + Action associated.
+Level 3 - HATEOAS (Object returns URI for resource)
+
+
+JAX-RS
+- Java has multiple libraries to use REST. e.g. Jersey, Restlet etc. Most of them follow a common construct. 
+
+
+MAVEN - 
+- Project management tool. Takes care of a lot of dependencies and life cycle management etc
